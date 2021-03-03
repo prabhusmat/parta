@@ -1,0 +1,90 @@
+//first prog: prag name====firstprog //
+///xml///
+
+
+<?xml version="1.0" encoding="utf-8"?>
+
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+    android:background="@color/cardview_light_background"
+        tools:context=".MainActivity" android:orientation="vertical">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="30dp"
+        android:text="My Simple first program"
+        android:textSize="24sp" />
+
+
+
+
+    </LinearLayout>
+
+
+
+
+//mainactivity.java//
+
+package com.example.firstprog;
+
+import androidx.appcompat.app.AppCompatActivity;
+
+import android.os.Bundle;
+
+import android.widget.Toast;
+
+public class MainActivity extends AppCompatActivity {
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+    }
+
+        @Override
+        protected void onStart() {
+            super.onStart();
+            Toast.makeText(this, "Activity Started: STARTED STATE", Toast.LENGTH_LONG).show();
+        }
+
+
+        @Override
+        protected void onResume() {
+            super.onResume();
+            Toast.makeText(this, "Activity Resumed: INTERACTIVE STATE", Toast.LENGTH_LONG).show();
+        }
+
+
+        @Override
+        protected void onPause() {
+            super.onPause();
+            Toast.makeText(this, "Activity Paused: PAUSED STATE", Toast.LENGTH_LONG).show();
+        }
+
+
+        @Override
+        protected void onStop() {
+            super.onStop();
+            Toast.makeText(this, "Activity Stopped: STOPPED STATE", Toast.LENGTH_LONG).show();
+        }
+
+
+        @Override
+        protected void onRestart() {
+            super.onRestart();
+            Toast.makeText(this, "Activity Restarted: RESTARTED STATE", Toast.LENGTH_LONG).show();
+        }
+
+
+        @Override
+        protected void onDestroy() {
+            super.onDestroy();
+            Toast.makeText(this, "THIS wont be displayed: DESTROYED STATE", Toast.LENGTH_LONG).show();
+        }
+
+}
